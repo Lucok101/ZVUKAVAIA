@@ -46,13 +46,37 @@
     </script>
 </body>
 </html>
-function createEggSymbols() {
+        function createSunSymbols() {
+            const body = document.body;
+            const sunSymbol = '☼'; // Символ буддийского солнца
+            for (let i = 0; i < 50; i++) {
+                const sunDiv = document.createElement('div');
+                sunDiv.className = 'sun-symbol';
+                sunDiv.innerText = sunSymbol;
+                sunDiv.style.left = Math.random() * window.innerWidth + 'px';
+                sunDiv.style.top = Math.random() * window.innerHeight + 'px';
+                body.appendChild(sunDiv);
+            }
+        }
+
+        function createEggSymbols() {
             const body = document.body;
             const eggSymbol = '卐'; // Символ яйца
-            for (let i = 0; i < 400; i++) {
+            for (let i = 0; i < 522; i++) {
                 const eggDiv = document.createElement('div');
                 eggDiv.className = 'egg-symbol';
                 eggDiv.innerText = eggSymbol;
                 eggDiv.style.left = Math.random() * window.innerWidth + 'px';
                 eggDiv.style.top = Math.random() * window.innerHeight + 'px';
                 body.appendChild(eggDiv);
+            }
+        }
+
+        window.onload = function() {
+            createSunSymbols();
+            createEggSymbols();
+        };
+    </script>
+
+</body>
+</html>
