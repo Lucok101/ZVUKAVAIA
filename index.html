@@ -20,7 +20,6 @@
 <body>
     <h1>Нажмите на кнопку, чтобы услышать звук!</h1>
 
-    <!-- Кнопки для воспроизведения звуков -->
     <div>
         <button onclick="playSound('sound1.mp3')">Звук 1</button>
         <button onclick="playSound('sound2.mp3')">Звук 2</button>
@@ -34,10 +33,6 @@
         <button onclick="playSound('sound10.mp3')">Звук 10</button>
     </div>
     
-    <br>
-    <button onclick="decreaseVolume()">Убавить звук</button>
-    <button onclick="increaseVolume()">Добавить звук</button>
-
     <audio id="audio" src=""></audio>
 
     <script>
@@ -46,14 +41,6 @@
         function playSound(soundFile) {
             audio.src = soundFile;
             audio.play();
-        }
-
-        function decreaseVolume() {
-            audio.volume = Math.max(0, audio.volume - 0.1); // Уменьшение громкости на 0.1
-        }
-
-        function increaseVolume() {
-            audio.volume = Math.min(1, audio.volume + 0.1); // Увеличение громкости на 0.1
         }
     </script>
 </body>
