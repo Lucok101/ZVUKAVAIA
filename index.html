@@ -26,7 +26,7 @@
 <body>
 
     <div id="buttons">
-        <button onclick="playSound(1)">махмут</button>
+      <button onclick="playSound(1)">махмут</button>
         <button onclick="playSound(2)">мармок</button>
         <button onclick="playSound(3)">алах</button>
         <button onclick="playSound(4)">нравица</button>
@@ -59,7 +59,7 @@
         // Функция для создания крестиков на фоне
         function createCrosses() {
             const body = document.body;
-            for (let i = 10; i < 100; i++) {
+            for (let i = 0; i < 100; i++) {
                 const cross = document.createElement('div');
                 cross.className = 'cross';
                 cross.innerText = '✖️';
