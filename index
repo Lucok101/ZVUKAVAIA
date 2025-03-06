@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт со смайлами</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px; /* Размер смайлов */
+            background-color: #f0f0f0;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 49%,
+                rgba(255, 255, 255, 0.1) 49%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 50%,
+                transparent 51%,
+                rgba(255, 255, 255, 0.1) 51%,
+                rgba(255, 255, 255, 0.1) 52%
+            );
+        }
+
+        .smile {
+            position: absolute;
+            white-space: nowrap;
+            opacity: 0.2; /* Прозрачность смайлов */
+        }
+    </style>
+</head>
+<body>
+    <div id="smile-container"></div>
+
+    <script>
+        const container = document.getElementById('smile-container');
+        const smile = '😎';
+        const numberOfSmiles = 100; // Количество смайлов
+
+        for (let i = 0; i < numberOfSmiles; i++) {
+            const smileElement = document.createElement('div');
+            smileElement.className = 'smile';
+            smileElement.innerText = smile;
+            smileElement.style.left = Math.random() * 100 + 'vw'; // Позиция по горизонтали
+            smileElement.style.top = Math.random() * 100 + 'vh'; // Позиция по вертикали
+            smileElement.style.transform = `scale(${Math.random() * 0.5 + 0.5})`; // Случайный размер
+            container.appendChild(smileElement);
+        }
+    </script>
+</body>
+</html>
