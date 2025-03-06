@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт со звуками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Нажмякайте, чтобы услышать звук!</h1>
+
+    <button onclick="playSound('sound1.mp3')">махмут 1</button>
+    <button onclick="playSound('sound2.mp3')">мудатон 2</button>
+    <button onclick="playSound('sound3.mp3')">эминем 3</button>
+    <button onclick="playSound('sound4.mp3')">нравица 4</button>
+    
+    <br>
+    <button onclick="decreaseVolume()">Убавить звук</button>
+    <button onclick="increaseVolume()">прибавить звук</button>
+
+    <audio id="audio" src=""></audio>
+
+    <script>
+        const audio = document.getElementById('audio');
+
+        function playSound(soundFile) {
+            audio.src = soundFile;
+            audio.play();
+        }
+
+        function decreaseVolume() {
+            audio.volume = Math.max(0, audio.volume - 0.1); // Уменьшение громкости на 0.1
+        }
+
+        function increaseVolume() {
+            audio.volume = Math.min(1, audio.volume + 0.1); // Увеличение громкости на 0.1
+        }
+    </script>
+</body>
+</html>
+
