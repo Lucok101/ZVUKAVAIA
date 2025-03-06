@@ -59,10 +59,10 @@
         // Функция для создания крестиков на фоне
         function createCrosses() {
             const body = document.body;
-            for (let i = 0; i < 100; i++) {
+            for (let i = 10; i < 100; i++) {
                 const cross = document.createElement('div');
                 cross.className = 'cross';
-                cross.innerText = '✖️';
+                cross.innerText = '😍';
                 cross.style.left = Math.random() * window.innerWidth + 'px';
                 cross.style.top = Math.random() * window.innerHeight + 'px';
                 body.appendChild(cross);
