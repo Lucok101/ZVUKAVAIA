@@ -46,18 +46,6 @@
     </script>
 </body>
 </html>
-        function createSunSymbols() {
-            const body = document.body;
-            const sunSymbol = '☼'; // Символ буддийского солнца
-            for (let i = 0; i < 50; i++) {
-                const sunDiv = document.createElement('div');
-                sunDiv.className = 'sun-symbol';
-                sunDiv.innerText = sunSymbol;
-                sunDiv.style.left = Math.random() * window.innerWidth + 'px';
-                sunDiv.style.top = Math.random() * window.innerHeight + 'px';
-                body.appendChild(sunDiv);
-            }
-        }
 
         function createEggSymbols() {
             const body = document.body;
